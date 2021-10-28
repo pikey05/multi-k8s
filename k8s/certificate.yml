@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cook-enterprises-com-tls
+spec:
+  secretName: cook-enterprises-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: cook-enterprises.com
+  dnsNames:
+    - cook-enterprises.com
+    - www.cook-enterprises.com
