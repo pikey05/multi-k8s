@@ -12,6 +12,6 @@ docker push smcook55/multi-worker:$SHA
 # Deploy to kubernetes
 kubectl apply -f k8s
 # Set new image tags
-kubectl set image deployments/server-deployment server=smcook55/multi-server/$SHA
-kubectl set image deployments/client-deployment client=smcook55/multi-client/$SHA
-kubectl set image deployments/worker-deployment worker=smcook55/multi-worker/$SHA
+kubectl set image deployments/server-deployment server=smcook55/multi-server:$SHA
+kubectl set image deployments/client-deployment client=smcook55/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=smcook55/multi-worker:$SHA
